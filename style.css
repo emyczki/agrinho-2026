@@ -1,199 +1,255 @@
-/* Reset básico */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* RESET */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
 }
 
-/* Configurações gerais */
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    line-height: 1.6;
-    background-color: #f4f9f4;
-    color: #333;
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#121212;
+    color:#f5f5f5;
+    line-height:1.6;
 }
 
-/* Cabeçalho */
-header {
-    background-color: #2e7d32;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 8%;
-    position: sticky;
-    top: 0;
+/* CABEÇALHO */
+
+header{
+    position:sticky;
+    top:0;
+    z-index:1000;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:18px 8%;
+
+    background:#1b5e20;
+    box-shadow:0 3px 10px rgba(0,0,0,.4);
 }
 
-.logo h1 {
-    font-size: 2rem;
+header h1{
+    color:#fff;
+    font-size:2rem;
 }
 
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 25px;
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:25px;
 }
 
-nav a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    transition: 0.3s;
+nav a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+    transition:.3s;
 }
 
-nav a:hover {
-    color: #c8e6c9;
+nav a:hover{
+    color:#8bc34a;
 }
 
-/* Banner Principal */
-.banner {
-    background: linear-gradient(
-        rgba(0,0,0,0.5),
-        rgba(0,0,0,0.5)
-    ),
-    url("https://images.unsplash.com/photo-1441974231531-c6227db76b6e");
+/* BANNER */
 
-    background-size: cover;
-    background-position: center;
-    height: 80vh;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    text-align: center;
-    color: white;
-    padding: 20px;
+.banner{
+    text-align:center;
+    padding-bottom:50px;
 }
 
-.banner h2 {
-    font-size: 3rem;
-    margin-bottom: 15px;
+.banner img{
+    width:100%;
+    height:520px;
+    object-fit:cover;
+    display:block;
 }
 
-.banner p {
-    font-size: 1.2rem;
-    max-width: 700px;
+.banner h2{
+    margin-top:35px;
+    font-size:3rem;
+    color:#8bc34a;
 }
 
-.banner button {
-    margin-top: 20px;
-    padding: 12px 25px;
-    border: none;
-    background-color: #4caf50;
-    color: white;
-    font-size: 1rem;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: 0.3s;
+.banner p{
+    max-width:800px;
+    margin:20px auto;
+    font-size:1.2rem;
+    color:#ddd;
 }
 
-.banner button:hover {
-    background-color: #388e3c;
+.banner button{
+    margin-top:20px;
+    padding:15px 35px;
+    border:none;
+    border-radius:8px;
+    background:#2e7d32;
+    color:white;
+    cursor:pointer;
+    font-size:1rem;
+    transition:.3s;
 }
 
-/* Seções */
-section {
-    padding: 60px 10%;
+.banner button:hover{
+    background:#43a047;
+    transform:scale(1.05);
 }
 
-section h2 {
-    color: #2e7d32;
-    margin-bottom: 20px;
-    text-align: center;
+/* SEÇÕES */
+
+section{
+    padding:70px 10%;
+}
+
+section h2{
+    text-align:center;
+    color:#8bc34a;
+    margin-bottom:25px;
+    font-size:2rem;
 }
 
 section p,
-section ul {
-    max-width: 900px;
-    margin: auto;
-    text-align: center;
+section ul{
+    max-width:900px;
+    margin:auto;
+    text-align:center;
+    color:#ddd;
 }
 
-/* Lista de impactos */
-#impactos ul {
-    list-style: none;
+/* IMPACTOS */
+
+#impactos ul{
+    list-style:none;
 }
 
-#impactos li {
-    background-color: white;
-    margin: 10px auto;
-    padding: 15px;
-    border-left: 5px solid #2e7d32;
-    max-width: 600px;
-    border-radius: 5px;
+#impactos li{
+    background:#1e1e1e;
+    margin:15px auto;
+    padding:18px;
+    border-left:6px solid #4caf50;
+    border-radius:8px;
+    max-width:700px;
+    transition:.3s;
 }
 
-/* Formulário */
-form {
-    max-width: 600px;
-    margin: auto;
-    background-color: white;
-    padding: 25px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+#impactos li:hover{
+    transform:translateY(-5px);
+    background:#2a2a2a;
+}
+
+/* IMAGEM TECNOLOGIA */
+
+#tecnologia img{
+    width:100%;
+    max-width:900px;
+    display:block;
+    margin:25px auto;
+    border-radius:12px;
+    box-shadow:0 0 20px rgba(0,0,0,.5);
+}
+
+/* FORMULÁRIO */
+
+form{
+    max-width:650px;
+    margin:auto;
+    background:#1e1e1e;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 0 20px rgba(0,0,0,.5);
 }
 
 form input,
-form textarea {
-    width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+form textarea{
+    width:100%;
+    padding:12px;
+    margin:12px 0;
+    border:none;
+    border-radius:6px;
+    background:#2b2b2b;
+    color:white;
 }
 
-form textarea {
-    height: 120px;
-    resize: none;
+form input::placeholder,
+form textarea::placeholder{
+    color:#bbb;
 }
 
-form button {
-    margin-top: 15px;
-    background-color: #2e7d32;
-    color: white;
-    border: none;
-    padding: 12px 20px;
-    border-radius: 5px;
-    cursor: pointer;
+form button{
+    width:100%;
+    padding:15px;
+    border:none;
+    border-radius:6px;
+    background:#2e7d32;
+    color:white;
+    font-size:1rem;
+    cursor:pointer;
+    transition:.3s;
 }
 
-form button:hover {
-    background-color: #1b5e20;
+form button:hover{
+    background:#43a047;
 }
 
-/* Rodapé */
-footer {
-    background-color: #1b5e20;
-    color: white;
-    text-align: center;
-    padding: 20px;
+/* RODAPÉ */
+
+footer{
+    background:#0d0d0d;
+    color:#ccc;
+    text-align:center;
+    padding:25px;
+    margin-top:40px;
 }
 
-/* Responsividade */
-@media (max-width: 768px) {
+/* ANIMAÇÃO */
 
-    header {
-        flex-direction: column;
-        gap: 15px;
+section{
+    animation:fade .8s ease;
+}
+
+@keyframes fade{
+
+    from{
+        opacity:0;
+        transform:translateY(30px);
     }
 
-    nav ul {
-        flex-direction: column;
-        text-align: center;
+    to{
+        opacity:1;
+        transform:translateY(0);
     }
 
-    .banner h2 {
-        font-size: 2rem;
-    }
+}
 
-    .banner p {
-        font-size: 1rem;
-    }
+/* RESPONSIVO */
 
-    section {
-        padding: 40px 5%;
-    }
+@media(max-width:768px){
+
+header{
+    flex-direction:column;
+    gap:20px;
+}
+
+nav ul{
+    flex-direction:column;
+    text-align:center;
+}
+
+.banner img{
+    height:260px;
+}
+
+.banner h2{
+    font-size:2rem;
+}
+
+.banner p{
+    font-size:1rem;
+}
+
+section{
+    padding:50px 6%;
+}
+
 }
